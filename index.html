@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ASP211.1</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<h3 id="ideas">Ideas</h3>
+<ol type="1">
+<li>Statistical Ensembles and the Foundations of Statistical Mechanics
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />What a microstate and
+macrostate are.</label></li>
+<li><label><input type="checkbox" />The idea of a statistical ensemble
+(microcanonical mainly so far).</label></li>
+<li><label><input type="checkbox" checked="" />The basic postulates of
+statistical mechanics: equal a priori probabilities.</label></li>
+<li><label><input type="checkbox" />Simple probability calculations and
+density of states.</label></li>
+</ul></li>
+<li>Thermal Interaction and the Emergence of Temperature
+<ul class="task-list">
+<li><label><input type="checkbox" />How systems exchange energy and tend
+toward thermal equilibrium.</label></li>
+<li><label><input type="checkbox" />The probabilistic argument for
+equilibrium (section 3.3–3.4).</label></li>
+<li><label><input type="checkbox" />The definition of temperature as a
+derivative of entropy or from probability arguments.</label></li>
+<li><label><input type="checkbox" />The role of heat reservoirs and
+sharpness of energy distributions.</label></li>
+</ul></li>
+<li>Emergence of Thermodynamics from Statistical Viewpoint
+<ul class="task-list">
+<li><label><input type="checkbox" />How statistical mechanics justifies
+the First Law and begins to motivate the Second Law.</label></li>
+<li><label><input type="checkbox" />Quasi-static processes,
+pressure-volume work.</label></li>
+<li><label><input type="checkbox" />Difference between exact and inexact
+differentials.</label></li>
+<li><label><input type="checkbox" />Conditions for equilibrium and
+discussion of irreversibility.</label></li>
+</ul></li>
+</ol>
+<h2 id="transcript">Transcript</h2>
+<h4 id="introduction">Introduction</h4>
+<p>Let’s start with one particle in one dimension. If we somehow know
+the <em>position and the momentum</em> of that particle at any time, we
+can tell about its position and momentum at other times. This is well
+established postulate under classical mechanics. What we further do is
+quantize the position and the momentum into <em>discrete</em> steps of
+<span class="math inline">\(\delta x\)</span> and <span
+class="math inline">\(\delta p\)</span>. Doing this will let us define
+some quantities which we will explore later. For now we can give the
+description of this system in terms of two numbers representing the
+position and the momentum. These are called the <em>quantum numbers</em>
+that characterize the state of the system and these give the complete
+description of the system, such that applying the commonly known
+equations of motion we can know the state of the system or the quantum
+numbers at any time. This generalizes to any number of particles and
+dimensions, for example for a particle in three dimensional space, we
+can describe it in six quantum numbers.</p>
+<h4 id="a-priori-axiom">A-priori Axiom</h4>
+<p>Let’s now take an example of a <em>particle under simple harmonic
+oscillations</em>. The energy of the system being constant <span
+class="math inline">\(E\)</span> which mind you is also discrete so it’s
+a value between <span class="math inline">\(E\)</span> and <span
+class="math inline">\(E+\delta E\)</span> classically. Knowing the <span
+class="math inline">\(x, p\)</span> and <span
+class="math inline">\(E\)</span> of the system we know all the quantum
+parameters. If we plot <span class="math inline">\(x\)</span> vs <span
+class="math inline">\(p\)</span> for energies between <span
+class="math inline">\(E\)</span> and <span
+class="math inline">\(E+\delta E\)</span> we get two ellipses for <span
+class="math inline">\(E\)</span> and <span
+class="math inline">\(E+\delta E\)</span> .If we overlay a grid of cells
+with spacing <span class="math inline">\(\delta x\)</span> and <span
+class="math inline">\(\delta p\)</span>, the number of cells lying
+within the area between the two ellipses gives a count of the accessible
+quantum states for energy between <span class="math inline">\(E\)</span>
+and <span class="math inline">\(E+\delta E\)</span>. To make use of all
+this, we need a basis postulate which we can follow to make predictions
+with. Such a postulate is called an <em>a-priori axiom</em> can we
+assume it to be true in order to make predictions off of it. Of course
+we don’t know if the axiom holds or not, we can only verify the
+predictions that we can make using it. If the predictions hold
+repeatedly, we can with further confidence believe that the axiom indeed
+holds. One of the fundamental axioms is “An isolated system in
+equilibrium is equally likely to be in any of it’s accessible states
+irrespective of time”. There’s nothing in the laws of mechanics that can
+contradict this statement and it is a well established axiom in
+statistical mechanics. Lets <em>make a simple prediction</em>. Every
+state inside the thickness of the ellipse is accessible to the system,
+hence called an accessible state. According to our postulate the system
+is equally likely to be in any of that accessible state. It follows that
+if corresponding to a particular value of <span
+class="math inline">\(x\)</span>, say <span
+class="math inline">\(x_{0}\)</span> if there are more accessible states
+compared to other value of <span class="math inline">\(x\)</span> say
+<span class="math inline">\(x_{1}\)</span>. Then the system is more
+likely have the quantum number <span
+class="math inline">\(x_{0}\)</span> than the quantum number <span
+class="math inline">\(x_{1}\)</span>. From the graph, near <span
+class="math inline">\(x=0\)</span> there are fewer states accessible to
+system compared to near the edge. Thus we conclude the particle is more
+likely to be near the edge than the center. This makes sense
+intuitively, the particle moves more slowly near the extreme positions
+and therefore spends more time there.</p>
+<h4 id="ensemble">Ensemble</h4>
+<p>It’s true that we can predict the states if we have access to all the
+quantum numbers available to us, but for sufficiently large systems such
+data is not of interest to us as a statistical viewpoint. Instead of
+describing system by it’s quantum parameters, we describe them using
+external parameters like: total energy, volume, density, pressure etc.
+These parameters together is referred to as the <em>macrostate</em> of
+the system. As one can imagine, there are several possible sets of
+quantum numbers associated with a singe macrostate, the set is called
+the <em>microstate</em> of the system. From our initial postulate we can
+say that a system defined by a macrostate will have equal probability of
+being in each microstate linked to that macrostate. From these
+definitions we <em>define <span class="math inline">\(\Omega(E)\)</span>
+as the number of microstates</em> available to system when total energy
+is between <span class="math inline">\(E\)</span> and <span
+class="math inline">\(E+\delta E\)</span>. Similarly <span
+class="math inline">\(\Omega(E; y_{1}\dots y_{n})\)</span> as the number
+of microstates available to the system subject to external parameters
+<span class="math inline">\(y_{1}\dots y_{n}\)</span>. Not going into
+detailed mathematical analysis, we state that <span
+class="math inline">\(\Omega(E)\)</span> <em>scales proportionally
+to</em> <span class="math inline">\(E^{f}\)</span> where <span
+class="math inline">\(f\)</span> is the number of quantum parameters. To
+grasp this, we turn to the simple harmonic oscillator. It’s obvious that
+for larger values of <span class="math inline">\(E\)</span> the size of
+the ellipse will be larger, increasing the microstates, roughly by the
+factor of <span class="math inline">\(E^{2}\)</span>. As the number of
+dimensions and particles increase, the number of microstates increase
+exponentially. For a mole of particles in three dimensions, this scales
+proportionally to <span class="math inline">\(E^{1\times
+10^{24}}\)</span> , which is hugely exponential.</p>
+<h4 id="interactions">Interactions</h4>
+<p>If a macrostate is defined by <span class="math inline">\(E_{0};
+y_{1}\dots y_{k}\dots y_{n}\)</span> and some constraint <span
+class="math inline">\(y_{k}\)</span> is allowed to change, then the
+probability that <span class="math inline">\(y_{k}=y\)</span> is <span
+class="math inline">\(\mathbf{P}(y)\)</span>. This probability is
+proportional to the number of microstates available to the system when
+<span class="math inline">\(y_{k}=y\)</span>. If we put no
+<em>restrictions on <span class="math inline">\(y_{k}\)</span> naturally
+it’ll assume a value <span class="math inline">\(y\)</span> where <span
+class="math inline">\(\mathbf{P}(y)\)</span> maximizes</em>. Hence we
+conclude that when a constraint is lifted the system assumes the value
+of external parameter where that parameters leads to maximum
+microstates. Let us take two systems <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(A&#39;\)</span> each in equilibrium. The system as
+a whole <span class="math inline">\(A^{\langle 0 \rangle}\)</span> is
+isolated and hence the total energy <span
+class="math inline">\(E^{\langle 0 \rangle}\)</span> of the system is
+conserved. If the subsystems <span class="math inline">\(A\)</span> and
+<span class="math inline">\(A&#39;\)</span> are allowed to interact such
+that their external parameters <span class="math inline">\(y_{1}\dots
+y_{n}\)</span> are fixed only the energies of each system are allowed to
+vary. Such statistical ensembles are called canonical ensembles.
+<strong>The energy of each <span class="math inline">\(A\)</span> in
+ensemble of many systems does not change by the same amount.</strong> So
+we describe the situation in terms of mean energy over all the systems.
+More concisely, <span class="math inline">\(\Delta \bar{E}=-\Delta
+\bar{E}&#39;\)</span> such that total energy change is zero. We call
+this type of energy change heat absorbed by the system <span
+class="math inline">\(Q\)</span>. Another type of interaction is when
+heat transfer is not possible, instead the external parameters of the
+subsystems are allowed to vary. In this case too, we describe the
+interaction in terms of change in average energy over ensemble of many
+subsystems. This time we call it the net work done on the system <span
+class="math inline">\(\mathcal{W}=\Delta \bar{E}\)</span>. The work done
+by the system is then <span
+class="math inline">\(W=-\mathcal{W}\)</span>. For a general interaction
+involving both heat exchange and work done we have the expression. <span
+class="math inline">\(Q=\Delta \bar{E}+W\)</span>, which is equivalent
+to the first law of thermodynamics.</p>
+<h4 id="temperature">Temperature</h4>
+<p>We study the thermal interactions in the system <span
+class="math inline">\(A^{\langle 0 \rangle}\)</span> in more detail. If
+the total energy of each subsystem be <span
+class="math inline">\(E\)</span> and <span
+class="math inline">\(E&#39;\)</span> respectively, we have <span
+class="math inline">\(E=E^{\langle 0 \rangle}-E&#39;\)</span>. The total
+number of accessible microstates of the system <span
+class="math inline">\(A^{\langle 0 \rangle}\)</span> is the given by the
+product of accessible microstates of the subsystems <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(A&#39;\)</span> . For each accessible microstate
+of <span class="math inline">\(A\)</span> the combined system has the
+choice of being in any accessible microstate of <span
+class="math inline">\(A&#39;\)</span> . Hence, <span
+class="math inline">\(\Omega^{\langle 0
+\rangle}(E)=\Omega(E)\Omega&#39;(E&#39;)=\Omega(E)\Omega&#39;(E^{\langle
+0 \rangle}-E)\propto \mathbf{P}(E)\)</span>. Hence the systems will
+assume the value of <span class="math inline">\(E\)</span> and
+consequently <span class="math inline">\(E&#39;\)</span> such that the
+number of accessible microstates is maximized. We wish find the most
+probable energy distribution of the subsystems, this can be analytically
+achieved by solving <span class="math inline">\(d\mathbf{P} /dE
+=0\)</span>. <span class="math display">\[\begin{align}
+\mathbf{P}\propto\Omega \cdot\Omega&#39;\,\text{ and }\,\Omega \propto
+E^{ f}\,\text{ and } \,\Omega&#39;\propto E&#39;^{f&#39;} \\
+\implies \mathbf{P}\propto E^{f}\cdot E&#39;^{f&#39;} \\
+\implies \ln \mathbf{P}=f\ln E+f&#39;\ln E&#39;+c \\
+\text{Function maximizes when}\, \\
+\frac{ \partial \ln \Omega(E) }{ \partial E } -\frac{ \partial \ln
+\Omega&#39;(E&#39;) }{ \partial E&#39; } = 0 \\
+\implies \frac{ \partial \ln \Omega(E) }{ \partial E } =\frac{ \partial
+\ln \Omega&#39;(E&#39;) }{ \partial E&#39; }  \\
+\implies\beta(E)=\beta&#39;(E&#39;)  &amp;  &amp; (\text{say} ) \\
+\end{align}\]</span> Hence we say that the system is in thermal
+equilibrium when this <span class="math inline">\(\beta(E)\)</span>
+equals <span class="math inline">\(\beta&#39;(E&#39;)\)</span>. We can
+define a convenient quantity <span class="math inline">\(T\)</span> such
+that, <span class="math inline">\(kT=1 /\beta\)</span>, then <span
+class="math inline">\(\dfrac{1}{T}=k\beta=\dfrac{ \partial (k\ln\Omega)
+}{ \partial E }=\dfrac{ \partial S }{ \partial E }\)</span>. The peak of
+the probability curve <span class="math inline">\(\mathbf{P}(E)\)</span>
+is very sharp and decreases rapidly for values far from <span
+class="math inline">\(\tilde{E}\)</span> where the <span
+class="math inline">\(\mathbf{P}(\tilde{E})\)</span> is maximum. Th.
+choice of the temperature variable is really a matter of choice
+(different <span class="math inline">\(k\)</span>) and is separate from
+the classical idea. Thermodynamically the temperature variable can be
+any external variable that shows enough change in value when the system
+is in contact with another system not already in thermal equilibrium
+with the test system. It can be anything from length, volume, pressure,
+etc.</p>
+</body>
+</html>
